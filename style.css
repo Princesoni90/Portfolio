@@ -428,8 +428,8 @@ body{
         
     }
    .home{
-    height: 70vh;
-    width: 100vw;
+    height: 100vh;
+    width: 95vw;
    }
    .nav{
     justify-content: center;
