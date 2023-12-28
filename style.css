@@ -461,11 +461,11 @@ body{
         width: 100vw;
     } 
     .form textarea{
-        width:50vw;
+        width:60vw;
         height: 15vh;
         margin-top: 1em;
     }
-    .action {
-        width:70vw;
+    .action input{
+        width:60vw;
     }
 }
