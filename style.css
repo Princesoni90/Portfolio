@@ -119,7 +119,7 @@ body{
 }
 .circle{
     width:43em;
-    height: 560px;
+    height: 43em;
     border: 5px solid #754ef9;
     border-radius: 50%;
     background-color: transparent;
@@ -146,7 +146,7 @@ body{
     background-color: transparent;
 }
 .ab{
-    opacity: 0;;
+    display: none;
 }
 .about-me{
     height: 100vh;
@@ -213,7 +213,6 @@ body{
     justify-content: center;
     align-items: center;
     width: 25em;
-    height: em;
     padding: 3rem 2rem 4rem;
     border-radius: 2em;
     box-shadow: 0.2rem .5rem .8rem black; 
@@ -345,9 +344,6 @@ body{
      .nav{
         padding: 2rem 3%;
     }
-    .circle{
-        margin-left: 12vw;
-    }
     .about-me{
         padding: 2rem;
     }
@@ -361,7 +357,10 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;          
-    }   
+    } 
+    .circle{
+        margin-left: 0;
+    }    
 }
 
  @media (max-width:1024px){
@@ -410,7 +409,7 @@ body{
         height:30vh;
     }
     .home{
-        height: 65vh;
+        height: 75vh;
     }
 
 } 
@@ -429,7 +428,8 @@ body{
         
     }
    .home{
-    height: 65vh;
+    height: 70vh;
+    width: 100vw;
    }
    .nav{
     justify-content: center;
@@ -453,15 +453,15 @@ body{
         display: none;
     }
     .about-me{
-        height: 60vh;
+        height: 80vh;
         align-items:end;
     }
     .about-content{
         width: 100vw;
     } 
     .form textarea{
-        width:15em;
-        height: 15em;
+        width:50vw;
+        height: 15vh;
         margin-top: 1em;
     }
 }
