@@ -341,25 +341,13 @@ body{
     color: white;
     background-color: transparent;
 }
-@media (max-width:1200px){
+@media (max-width:1500px){
      .nav{
         padding: 2rem 3%;
     }
-    
-    /* .profection-box{
-        height: 50rem;
-    } */
     .circle{
         margin-left: 12vw;
     }
-    /* .homeimg img{
-        height: 70vh;
-        position: absolute;
-        right: 0vw;
-        bottom:14vh;
-        margin: 0 0 0 0;
-        background-color: transparent;
-    } */
     .about-me{
         padding: 2rem;
     }
@@ -369,10 +357,6 @@ body{
     .circle{
          margin-left: 10vw;
     }
-    /* .profection-box{
-        right:0;
-        height: 65rem;
-    } */
     .aboutimg{
     display: flex;
     justify-content: center;
