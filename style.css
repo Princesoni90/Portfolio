@@ -432,6 +432,7 @@ body{
     width: 100vw;
    }
    .nav{
+       width:100vw;
     justify-content: center;
    }
     .icons{
@@ -464,7 +465,7 @@ body{
         height: 15vh;
         margin-top: 1em;
     }
-    .action{
-        width:90vw;
+    .action {
+        width:70vw;
     }
 }
