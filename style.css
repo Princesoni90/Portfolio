@@ -428,11 +428,10 @@ body{
         
     }
    .home{
-    height: 100vh;
+    height: 70vh;
     width: 100vw;
    }
    .nav{
-       width:100vw;
     justify-content: center;
    }
     .icons{
@@ -454,8 +453,8 @@ body{
         display: none;
     }
     .about-me{
-        height: 100vh;
-        align-items:center;
+        height: 80vh;
+        align-items:end;
     }
     .about-content{
         width: 100vw;
@@ -467,5 +466,8 @@ body{
     }
     .action input{
         width:60vw;
+    }
+    .footer p{
+        font-size: 1.5em;
     }
 }
