@@ -419,7 +419,7 @@ body{
         height: 65vh;
     }
 }
-@media (max-width:694px){
+@media (max-width:700px){
     html{
         font-size: 0.7em;
     }
@@ -459,6 +459,7 @@ body{
     }
     .about-content{
         width: 100vw;
+        gap:0.1vw;
     } 
     .form textarea{
         width:60vw;
