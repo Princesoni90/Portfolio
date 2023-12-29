@@ -213,8 +213,8 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 25em;
-    padding: 3rem 2rem 4rem;
+    width: 20em;
+    padding: 3rem 2rem 4rem 3rem;
     border-radius: 2em;
     box-shadow: 0.2rem .5rem .8rem black; 
     font-size: 1.4em;
@@ -442,11 +442,11 @@ body{
         display: none;
     }
     .content{
-        padding: 50vh 2vw;
+        padding: 40vh 2vw;
         width: 100vw;
         height:30vh;
         gap:1em;
-        font-size:1.2em;
+        font-size:1.4em;
     }
     .overlay{
         display: none;
@@ -473,8 +473,5 @@ body{
     .footer p{
         font-size: 1.5em;
     }
-    . service {
-        width:20em;
-    } 
 }
 
