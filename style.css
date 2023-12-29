@@ -367,6 +367,7 @@ body{
 
  @media (max-width:1024px){
     .aboutimg{
+
         display: flex;
         justify-content: center;
         align-items: center;          
@@ -415,18 +416,13 @@ body{
     }
 
 } 
-@media (max-width:770px){
-    .homeimg img{
-        height: 65vh;
-    }
-}
-@media (max-width:700px){
+@media (max-width:767px){
     html{
         font-size: 0.7em;
     }
     .homeimg img{
-        height: 50vh;
-        top: 20vh;
+        height: 46vh;
+        top: 24vh;
         right: 0;
         left: 43vw;
         bottom: 0;
