@@ -8,7 +8,7 @@
     color:black;
     background-color: white;
     font-family: 'Poppins', sans-serif;
-}
+}    
 body{
     display: flex;
     flex-direction: column;
@@ -443,7 +443,7 @@ body{
         display: none;
     }
     .content{
-        padding: 50vh 2vw;
+        padding: 40vh 2vw;
         width: 100vw;
         height:30vh;
         gap:1em;
@@ -461,7 +461,8 @@ body{
     }
     .about-content{
         width: 100vw;
-        gap:0;
+        gap:0.5em;
+        font-size:1.5em;
     } 
     .form textarea{
         width:60vw;
