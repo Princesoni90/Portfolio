@@ -153,6 +153,7 @@ body{
     height: 100vh;
     display: flex;
     align-items: center;
+    justify-content:center;
 }
 .aboutimg{
     top:0;
@@ -346,7 +347,7 @@ body{
         padding: 2rem 3%;
     }
     .about-me{
-        padding: 2rem;
+        gap: 2rem;
     }
     .action{
         width: 80vw;
@@ -442,11 +443,11 @@ body{
         display: none;
     }
     .content{
-        padding: 40vh 2vw;
+        padding: 50vh 2vw;
         width: 100vw;
         height:30vh;
         gap:1em;
-        font-size:1.4em;
+        font-size:1.3em;
     }
     .overlay{
         display: none;
@@ -455,7 +456,7 @@ body{
         display: none;
     }
     .about-me{
-        height: 80vh;
+        height: 100vh;
         align-items:end;
     }
     .about-content{
