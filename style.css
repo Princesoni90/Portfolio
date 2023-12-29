@@ -459,7 +459,7 @@ body{
     }
     .about-content{
         width: 100vw;
-        gap:0.1vw;
+        gap:0;
     } 
     .form textarea{
         width:60vw;
