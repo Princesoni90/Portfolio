@@ -442,10 +442,11 @@ body{
         display: none;
     }
     .content{
-        padding: 40vh 2vw;
+        padding: 50vh 2vw;
         width: 100vw;
         height:30vh;
-        gap:1em
+        gap:1em;
+        font-size:1.2em;
     }
     .overlay{
         display: none;
