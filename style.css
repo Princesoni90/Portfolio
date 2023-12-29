@@ -426,11 +426,14 @@ body{
     }
     .homeimg img{
         height: 50vh;
-        top: 18vh;
+        top: 20vh;
+        right: 0;
+        left: 43vw;
+        bottom: 0;
         
     }
    .home{
-    height: 100vh;
+    height: 80vh;
     width: 95vw;
    }
    .nav{
@@ -456,24 +459,45 @@ body{
         display: none;
     }
     .about-me{
-        height: 100vh;
-        align-items:end;
+        height: 60vh;
+        align-items:center;
+    }
+    .about-content h2{
+        font-size: 2.5em;
     }
     .about-content{
         width: 100vw;
-        gap:0.5em;
+        gap:1.5em;
         font-size:1.5em;
+        padding: 2em;
     } 
+    .services h1{
+        font-size: 4em;
+    }
+    .service{
+        width: 80vw;
+    }
+    .projects h1{
+        font-size: 3.4em;
+    }
+    .project{
+        width: 80vw;
+    }
+    .contactscontainer{
+        width: 80vw;
+    }
+    .form h1{
+        font-size: 4em;
+    }
     .form textarea{
-        width:60vw;
+        width:70vw;
         height: 15vh;
         margin-top: 1em;
     }
     .action input{
-        width:60vw;
+        width:70vw;
     }
     .footer p{
         font-size: 1.5em;
     }
 }
-
