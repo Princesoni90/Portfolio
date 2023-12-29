@@ -472,4 +472,8 @@ body{
     .footer p{
         font-size: 1.5em;
     }
+    . service {
+        width:20em;
+    } 
 }
+
