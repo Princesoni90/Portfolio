@@ -1,3 +1,5 @@
+"use client";
+
 import { SkillDataProvider } from "@/components/sub/skill-data-provider";
 import { SkillText } from "@/components/sub/skill-text";
 import { useState, useRef } from "react";
