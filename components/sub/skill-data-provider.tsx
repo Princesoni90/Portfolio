@@ -36,7 +36,6 @@ export const SkillDataProvider = ({
       initial="hidden"
       variants={imageVariants}
       animate={inView ? "visible" : "hidden"}
-      custom={index}
       transition={{ delay: index * animationDelay }}
     >
       <Image src={`/skills/${src}`} width={width} height={height} alt={name} />
