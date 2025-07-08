@@ -21,22 +21,14 @@ export const SkillDataProvider = ({
 }: SkillDataProviderProps) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.1,
   });
 
   const imageVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: { 
-      opacity: 1, 
-      scale: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut"
-      }
-    },
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
   };
 
-  const animationDelay = Math.min(index * 0.1, 1);
+  const animationDelay = 0.1;
 
   return (
     <motion.div
@@ -45,17 +37,9 @@ export const SkillDataProvider = ({
       variants={imageVariants}
       animate={inView ? "visible" : "hidden"}
       custom={index}
-      transition={{ delay: animationDelay }}
-      className="hover:scale-110 transition-transform duration-300"
+      transition={{ delay: index * animationDelay }}
     >
-      <Image 
-        src={`/skills/${src}`} 
-        width={width} 
-        height={height} 
-        alt={name}
-        loading="lazy"
-        className="object-contain"
-      />
+      <Image src={`/skills/${src}`} width={width} height={height} alt={name} />
     </motion.div>
   );
 };
