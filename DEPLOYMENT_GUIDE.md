@@ -1,274 +1,263 @@
-# Hostinger Deployment Guide for Next.js Space Portfolio
+# Hostinger Regular Plan Deployment Guide for Next.js Space Portfolio
 
 ## Overview
-This guide will help you deploy your Next.js space portfolio to Hostinger Premium hosting plan with static export configuration.
+This guide will help you deploy your Next.js space portfolio to your regular Hostinger hosting plan. The project has been configured to export as static HTML, CSS, and JavaScript files that work perfectly on traditional web hosting.
 
-## Your Hostinger Premium Plan Features
-- ✅ 25 websites
-- ✅ 25 GB SSD storage
-- ✅ Free domain (₹749.00 value)
-- ✅ Free SSL certificate
-- ✅ CDN support
-- ✅ Dedicated IP address
-- ✅ Priority support
+## Your Hostinger Plan Compatibility
+✅ **Perfect for static websites** - Your plan supports HTML, CSS, JavaScript  
+✅ **No server-side requirements** - Everything runs in the browser  
+✅ **Fast loading** - Static files load quickly  
+✅ **SEO friendly** - Search engines can easily crawl static content  
 
 ## Prerequisites
 - Node.js 18+ installed on your local machine
-- Git installed
-- Access to your Hostinger hosting panel
-- FTP/SFTP client (FileZilla recommended)
+- Access to your Hostinger hosting panel or FTP credentials
+- FTP client (FileZilla recommended) or use Hostinger's File Manager
 
-## Step 1: Prepare Your Project for Static Export
+## Step 1: Build Your Project Locally
 
-### 1.1 Update Configuration
-The project has been configured for static export with the following changes:
-- `next.config.js` updated with `output: 'export'`
-- Images configured as `unoptimized: true`
-- Build errors temporarily ignored for deployment
-
-### 1.2 Build the Project Locally
+### 1.1 Install Dependencies and Build
 ```bash
-# Install dependencies
+# Navigate to your project folder
+cd your-project-folder
+
+# Install dependencies (if not already done)
 npm install
 
-# Build the project for production
+# Build the static version
 npm run build
-
-# This will create an 'out' folder with static files
 ```
 
-## Step 2: Access Your Hostinger Control Panel
+This creates an `out` folder containing all the static files (HTML, CSS, JS) that your Hostinger plan can host.
 
-1. **Login to Hostinger**
-   - Go to [hpanel.hostinger.com](https://hpanel.hostinger.com)
-   - Login with your credentials
-
-2. **Navigate to File Manager**
-   - Click on "File Manager" in your hosting panel
-   - Or use FTP/SFTP credentials provided by Hostinger
-
-## Step 3: Upload Your Files
+## Step 2: Access Your Hostinger Hosting
 
 ### Option A: Using Hostinger File Manager
-1. Navigate to `public_html` folder (or your domain's folder)
-2. Delete any existing files (like default index.html)
-3. Upload all contents from the `out` folder to `public_html`
-4. Ensure the file structure looks like:
+1. Login to your Hostinger control panel
+2. Go to "File Manager"
+3. Navigate to `public_html` folder
+
+### Option B: Using FTP (Recommended)
+1. **Get your FTP credentials from Hostinger:**
+   - Host: your-domain.com or provided IP
+   - Username: your FTP username
+   - Password: your FTP password
+   - Port: 21
+
+2. **Download FileZilla (free FTP client):**
+   - Visit [filezilla-project.org](https://filezilla-project.org)
+   - Download and install FileZilla Client
+
+## Step 3: Upload Your Website Files
+
+### 3.1 Prepare for Upload
+1. Open the `out` folder created by the build process
+2. You'll see files like:
    ```
-   public_html/
-   ├── _next/
-   ├── projects/
-   ├── skills/
-   ├── videos/
-   ├── index.html
-   ├── about-me.html
-   ├── skills.html
-   ├── projects.html
+   out/
+   ├── _next/           (CSS and JS files)
+   ├── projects/        (Project images)
+   ├── skills/          (Skill icons)
+   ├── videos/          (Background videos)
+   ├── index.html       (Main page)
+   ├── about-me.html    (About page)
+   ├── skills.html      (Skills page)
+   ├── projects.html    (Projects page)
    └── other files...
    ```
 
-### Option B: Using FTP/SFTP
-1. **Get FTP Credentials from Hostinger:**
-   - Host: your-domain.com or IP address
-   - Username: provided by Hostinger
-   - Password: provided by Hostinger
-   - Port: 21 (FTP) or 22 (SFTP)
+### 3.2 Upload Using FileZilla
+1. **Connect to your server:**
+   - Open FileZilla
+   - Enter your FTP credentials
+   - Click "Quickconnect"
 
-2. **Upload using FileZilla:**
-   - Connect to your server
-   - Navigate to `public_html`
-   - Upload all contents from the `out` folder
+2. **Upload files:**
+   - In the right panel, navigate to `public_html`
+   - Delete any existing files (like default index.html)
+   - Select ALL files from your `out` folder
+   - Drag and drop them to `public_html`
+   - Wait for upload to complete
 
-## Step 4: Configure Domain and SSL
+### 3.3 Upload Using Hostinger File Manager
+1. Go to File Manager in your Hostinger panel
+2. Navigate to `public_html`
+3. Delete existing files
+4. Click "Upload" and select all files from your `out` folder
+5. Wait for upload to complete
 
-### 4.1 Domain Setup
-1. **If using a new domain (included in your plan):**
-   - Go to "Domains" in your Hostinger panel
-   - Add your domain and point it to your hosting account
+## Step 4: Verify Your Website
 
-2. **If using an existing domain:**
-   - Update nameservers to Hostinger's:
-     - ns1.dns-parking.com
-     - ns2.dns-parking.com
+### 4.1 Check Your Live Website
+1. Visit your domain in a web browser
+2. Test all navigation links:
+   - About me section
+   - Skills section
+   - Projects section
+3. Verify that:
+   - Images load correctly
+   - Videos play properly
+   - Animations work smoothly
+   - Mobile responsiveness works
 
-### 4.2 SSL Certificate
-1. Go to "SSL" in your Hostinger panel
-2. Enable "Force HTTPS" for your domain
-3. SSL certificate should be automatically installed (free with your plan)
+### 4.2 Test Different Devices
+- Desktop browsers (Chrome, Firefox, Safari, Edge)
+- Mobile devices (iOS Safari, Android Chrome)
+- Tablet devices
 
-## Step 5: Optimize for Performance
+## Step 5: Optimize Performance (Optional)
 
-### 5.1 Enable CDN
-1. In Hostinger panel, go to "Performance"
-2. Enable CDN (included in your premium plan)
-3. This will speed up your website globally
-
-### 5.2 Configure Caching
-1. Enable browser caching in your hosting settings
-2. Set appropriate cache headers for static assets
-
-## Step 6: Set Up Custom Error Pages (Optional)
-
-Create custom error pages in your `public_html`:
-```html
-<!-- 404.html -->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Page Not Found</title>
-    <meta http-equiv="refresh" content="0; url=/">
-</head>
-<body>
-    <script>window.location.href = "/";</script>
-</body>
-</html>
-```
-
-## Step 7: Configure .htaccess for Better Performance
-
-Create a `.htaccess` file in your `public_html` folder:
+### 5.1 Create .htaccess File
+Create a `.htaccess` file in your `public_html` folder to improve performance:
 
 ```apache
-# Enable compression
+# Enable compression for faster loading
 <IfModule mod_deflate.c>
-    AddOutputFilterByType DEFLATE text/plain
     AddOutputFilterByType DEFLATE text/html
-    AddOutputFilterByType DEFLATE text/xml
     AddOutputFilterByType DEFLATE text/css
-    AddOutputFilterByType DEFLATE application/xml
-    AddOutputFilterByType DEFLATE application/xhtml+xml
-    AddOutputFilterByType DEFLATE application/rss+xml
     AddOutputFilterByType DEFLATE application/javascript
-    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE text/javascript
 </IfModule>
 
-# Set cache headers
+# Set cache headers for better performance
 <IfModule mod_expires.c>
     ExpiresActive on
-    ExpiresByType text/css "access plus 1 year"
-    ExpiresByType application/javascript "access plus 1 year"
-    ExpiresByType image/png "access plus 1 year"
-    ExpiresByType image/jpg "access plus 1 year"
-    ExpiresByType image/jpeg "access plus 1 year"
-    ExpiresByType image/gif "access plus 1 year"
-    ExpiresByType image/svg+xml "access plus 1 year"
-    ExpiresByType video/webm "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/webp "access plus 1 month"
+    ExpiresByType video/webm "access plus 1 month"
 </IfModule>
 
 # Security headers
 <IfModule mod_headers.c>
     Header always set X-Content-Type-Options nosniff
-    Header always set X-Frame-Options DENY
-    Header always set X-XSS-Protection "1; mode=block"
+    Header always set X-Frame-Options SAMEORIGIN
 </IfModule>
-
-# Redirect to HTTPS
-RewriteEngine On
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 ```
 
-## Step 8: Test Your Deployment
+### 5.2 Enable SSL (If Available)
+- Check if your Hostinger plan includes SSL
+- Enable it in your control panel for HTTPS
 
-1. **Check your website:**
-   - Visit your domain
-   - Test all navigation links
-   - Verify images and videos load correctly
-   - Test on mobile devices
+## Step 6: Update Your Portfolio Content
 
-2. **Performance Testing:**
-   - Use Google PageSpeed Insights
-   - Test loading speed
-   - Verify CDN is working
+### 6.1 Making Changes
+When you want to update your portfolio:
 
-## Step 9: Set Up Monitoring and Backups
+1. **Edit your source files locally**
+2. **Rebuild the project:**
+   ```bash
+   npm run build
+   ```
+3. **Upload the new `out` folder contents** to replace the old files
 
-### 9.1 Backups
-- Hostinger provides weekly backups (included in your plan)
-- You can also create manual backups from the control panel
-
-### 9.2 Monitoring
-- Set up uptime monitoring
-- Monitor website performance
-- Check SSL certificate expiry
+### 6.2 Quick Content Updates
+To update specific content:
+- **Projects:** Edit `constants/index.ts` → PROJECTS array
+- **Skills:** Edit `constants/index.ts` → SKILL_DATA arrays  
+- **Personal info:** Edit `constants/index.ts` → SOCIALS, FOOTER_DATA
+- **Hero section:** Edit `components/sub/hero-content.tsx`
 
 ## Troubleshooting Common Issues
 
-### Issue 1: Videos Not Loading
-- Ensure video files are uploaded correctly
-- Check file permissions (should be 644)
-- Verify video formats are supported
+### Issue 1: Website Shows "Index of /" or Directory Listing
+**Solution:** Ensure `index.html` is in the root of `public_html`
 
-### Issue 2: Images Not Displaying
-- Check image paths in the code
-- Ensure images are in the correct folders
-- Verify file permissions
+### Issue 2: Images Not Loading
+**Solutions:**
+- Check that images are uploaded to correct folders (`projects/`, `skills/`)
+- Verify file names match exactly (case-sensitive)
+- Ensure file permissions are correct (644 for files, 755 for folders)
 
-### Issue 3: CSS/JS Not Loading
-- Clear browser cache
-- Check if files are uploaded correctly
-- Verify .htaccess configuration
+### Issue 3: Videos Not Playing
+**Solutions:**
+- Ensure video files are uploaded to `videos/` folder
+- Check file sizes aren't too large for your hosting plan
+- Verify video formats are web-compatible (.webm, .mp4)
 
-### Issue 4: 404 Errors
-- Ensure all HTML files are in the root directory
-- Check internal links
-- Set up proper redirects
+### Issue 4: CSS/JavaScript Not Working
+**Solutions:**
+- Ensure `_next/` folder is uploaded completely
+- Check that all files in `_next/static/` are present
+- Clear browser cache and try again
 
-## Maintenance and Updates
+### Issue 5: Navigation Links Not Working
+**Solution:** The static export creates separate HTML files for each route, which should work automatically
 
-### Regular Updates
-1. **Content Updates:**
-   - Modify source files locally
-   - Run `npm run build`
-   - Upload new `out` folder contents
+## File Structure on Your Server
 
-2. **Dependency Updates:**
-   ```bash
-   npm update
-   npm audit fix
-   npm run build
-   ```
+After successful upload, your `public_html` should look like:
 
-### Performance Monitoring
-- Monitor website speed monthly
-- Check for broken links
-- Update content regularly
-- Monitor SSL certificate status
+```
+public_html/
+├── _next/
+│   ├── static/
+│   │   ├── css/
+│   │   ├── js/
+│   │   └── media/
+├── projects/
+│   ├── project-1.webp
+│   ├── project-2.webp
+│   └── project-3.webp
+├── skills/
+│   ├── html.png
+│   ├── css.png
+│   ├── js.png
+│   └── [other skill icons]
+├── videos/
+│   ├── blackhole.webm
+│   ├── encryption-bg.webm
+│   └── skills-bg.webm
+├── index.html
+├── about-me.html
+├── skills.html
+├── projects.html
+├── hero-bg.svg
+├── lock-main.png
+├── lock-top.png
+├── logo.png
+└── .htaccess (optional)
+```
 
-## Support and Resources
+## Performance Tips
 
-### Hostinger Support
-- **Priority Support** (included in your premium plan)
-- Live chat available 24/7
-- Knowledge base: [support.hostinger.com](https://support.hostinger.com)
+1. **Optimize Images:** Your images are already optimized, but you can compress them further if needed
+2. **Monitor Loading Speed:** Use Google PageSpeed Insights to check performance
+3. **Regular Updates:** Keep your content fresh and updated
+4. **Backup:** Keep local backups of your source code
 
-### Additional Resources
-- [Next.js Static Export Documentation](https://nextjs.org/docs/app/building-your-application/deploying/static-exports)
-- [Hostinger Tutorials](https://www.hostinger.com/tutorials)
+## Cost-Effective Benefits
 
-## Security Best Practices
+✅ **No monthly server costs** - Just your regular hosting plan  
+✅ **Fast loading** - Static files load quickly  
+✅ **Low bandwidth usage** - Efficient for your hosting limits  
+✅ **Easy maintenance** - Simple file uploads for updates  
+✅ **SEO friendly** - Search engines love static sites  
 
-1. **Keep Dependencies Updated**
-   ```bash
-   npm audit
-   npm update
-   ```
+## Support Resources
 
-2. **Regular Backups**
-   - Use Hostinger's backup feature
-   - Keep local backups of your source code
-
-3. **Monitor Security**
-   - Enable security headers in .htaccess
-   - Monitor for suspicious activity
-   - Keep SSL certificates updated
+- **Hostinger Support:** Available through your control panel
+- **FileZilla Help:** [filezilla-project.org/support.php](https://filezilla-project.org/support.php)
+- **Web Development:** Basic HTML/CSS/JS knowledge helpful for customizations
 
 ## Conclusion
 
-Your Next.js space portfolio is now successfully deployed on Hostinger! The static export approach ensures fast loading times and optimal performance. With your premium plan features like CDN, SSL, and dedicated IP, your portfolio will provide an excellent user experience.
+Your Next.js space portfolio is now perfectly configured for your regular Hostinger hosting plan! The static export approach means:
 
-Remember to regularly update your content and monitor performance to maintain a professional online presence.
+- ✅ **Compatible** with any HTML/CSS/JS hosting
+- ✅ **Fast loading** times for visitors
+- ✅ **Easy to maintain** with simple file uploads
+- ✅ **Cost-effective** using your existing hosting plan
+- ✅ **Professional** appearance and functionality
+
+Your portfolio will work beautifully on your Hostinger plan and provide an excellent showcase for your skills and projects!
 
 ---
 
-**Need Help?** Contact Hostinger's priority support or refer to their comprehensive documentation for additional assistance.
+**Quick Start Summary:**
+1. Run `npm run build` locally
+2. Upload `out` folder contents to `public_html` via FTP
+3. Visit your domain to see your live portfolio!
