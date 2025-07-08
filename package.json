@@ -6,12 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next build && next export"
   },
   "author": {
-    "name": "Sanidhya Kumar Verma",
-    "email": "sanidhya.verma12345@gmail.com",
-    "url": "https://github.com/sanidhyy"
+    "name": "Abdul Rahman",
+    "email": "arrahmanofficial9@gmail.com",
+    "url": "https://github.com/HuzaifAhmed01"
   },
   "description": "Welcome to my full stack Next.js 14 space portfolio.",
   "keywords": [
@@ -26,17 +27,14 @@
     "clsx",
     "3d-portfolio",
     "3d-website",
-    "sonner",
     "framer-motion",
     "motion",
     "animation",
     "heroicons",
-    "next-themes",
     "postcss",
     "prettier",
     "react-dom",
     "tailwindcss",
-    "tailwindcss-animate",
     "ui/ux",
     "js",
     "javascript",
@@ -46,48 +44,29 @@
     "css"
   ],
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/sanidhyy/space-portfolioit"
-  },
-  "homepage": "https://github.com/sanidhyy/space-portfolio#readme",
-  "bugs": {
-    "url": "https://github.com/sanidhyy/space-portfolio/issues",
-    "email": "sanidhya.verma12345@gmail.com"
-  },
-  "funding": [
-    {
-      "type": "patreon",
-      "url": "https://www.patreon.com/sanidhy"
-    },
-    {
-      "type": "Buy me a coffee",
-      "url": "https://www.buymeacoffee.com/sanidhy"
-    }
-  ],
   "dependencies": {
     "@heroicons/react": "^2.1.1",
     "@react-three/drei": "^9.93.0",
     "@react-three/fiber": "^8.15.13",
     "clsx": "^2.1.0",
     "framer-motion": "^10.17.12",
+    "maath": "^0.10.7",
     "next": "14.2.15",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.0.1",
     "react-intersection-observer": "^9.5.3",
-    "sharp": "^0.34.1",
     "tailwind-merge": "^2.2.0",
-    "three": "^0.160.0",
-    "yarn": "^1.22.22"
+    "three": "^0.160.0"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/three": "^0.160.0",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
-    "eslint-config-next": "14.0.4",
+    "eslint-config-next": "14.2.15",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
